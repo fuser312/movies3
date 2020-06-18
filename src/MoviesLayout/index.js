@@ -55,29 +55,33 @@ class MoviesLayout extends React.Component {
                                 />
                             })
                         }
+
                     </div>
-                    <footer>
-                        {this.state.page > 1 && <Link to={`/${this.state.page - 1}`} onClick={async () => {
-                            this.setState({
-                                page: this.state.page - 1
-                            });
-                            await this.getMoviesData(this.state.page - 1);
-                        }}>
-                            <button className={'previous'}>
-                                Previous
-                            </button>
-                        </Link>}
-                        <Link to={`/${this.state.page + 1}`} onClick={async () => {
-                            this.setState({
-                                page: this.state.page + 1
-                            });
-                            await this.getMoviesData(this.state.page + 1);
-                        }}>
-                            <button className={'next'}>
-                                Next
-                            </button>
-                        </Link>
-                    </footer>
+
+                    <div className="footer_main">
+                        <footer>
+                            {this.state.page > 1 && <Link to={`/${this.state.page - 1}`} onClick={async () => {
+                                this.setState({
+                                    page: this.state.page - 1
+                                });
+                                await this.getMoviesData(this.state.page - 1);
+                            }}>
+                                <button className={'previous'}>
+                                    Previous
+                                </button>
+                            </Link>}
+                            <Link to={`/${this.state.page + 1}`} onClick={async () => {
+                                this.setState({
+                                    page: this.state.page + 1
+                                });
+                                await this.getMoviesData(this.state.page + 1);
+                            }}>
+                                <button className={'next'}>
+                                    Next
+                                </button>
+                            </Link>
+                        </footer>
+                    </div>
                 </div>
             )
         }

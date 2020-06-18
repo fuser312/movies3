@@ -48,8 +48,14 @@
     padding-left: 80px;
 }
 
+.footer_main{
+    background-color: black;
+    width: 100%;
+
+}
 footer{
-    margin: 30px;
+    margin: 20px 45%;
+
 }
 .previous, .next {
     border-radius: 15px;
